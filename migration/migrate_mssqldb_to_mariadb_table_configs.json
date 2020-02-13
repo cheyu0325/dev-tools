@@ -1,0 +1,15 @@
+{
+	"table_rows_count_sql": "SELECT COUNT(*) row_count FROM TABLE",
+	"offset": 0,
+	"limit": 500,
+	"huge_query_limit": 5000000,
+	"user_account": {
+		"mssql_table": "mssql_table_name",
+		"maria_table": "maria_table_name",
+		"fields" : "column1, column2, ... etc.",
+		"cast_fields" : "CAST (source_table_column1 AS transfer_data_type) target_table_column1, ... etc.",
+		"non_cast_fields" : "target_table_column1, ... etc.",
+		"mssql_fetch_sql" : "SELECT FIELDS FROM TABLE ORDER BY id OFFSET OFFSET_NUM ROWS FETCH NEXT LIMIT_NUM ROWS ONLY",
+		"maria_insert_sql" : "INSERT INTO TABLE (FIELDS) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE id = VALUES(id)"
+	}
+}
